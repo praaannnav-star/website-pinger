@@ -1,0 +1,16 @@
+name: Web Monitor
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Visit Website
+        run: |
+          curl -L "https://nayepankh-backend-jvx9.onrender.com"
